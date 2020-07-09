@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 /*
 hello world 实例
-func main()  {
+funcs main()  {
 	fmt.Println("hello world")
 }
  */
@@ -15,7 +14,7 @@ func main()  {
 
 /*
 并发实例
-func calc()  {
+funcs calc()  {
 	for i:=0; i < 10; i++ {
 		time.Sleep(1*time.Second)
 		fmt.Println( "current time", i)
@@ -23,7 +22,7 @@ func calc()  {
 }
 
 
-func main() {
+funcs main() {
 	go calc()
 	fmt.Println("hello world")
 }
@@ -32,11 +31,11 @@ func main() {
 
 /*
 d多返回值
-func add(a int, b int) (int, int) {
+funcs add(a int, b int) (int, int) {
 	return a + b, a - b
 }
 
-func main()  {
+funcs main()  {
 	sum, sub := add(3, 4)
 	fmt.Println(sum, sub)
 }
@@ -44,7 +43,7 @@ func main()  {
 
 
 /*
-func main()  {
+funcs main()  {
 	var (
 		a int = 1
 		b string = "go"
@@ -59,7 +58,7 @@ func main()  {
 
 /*
 字符串操作
-func main()  {
+funcs main()  {
 	// len 的使用
 	var a string = "hello"
 	var strLen = len(a)
@@ -101,3 +100,12 @@ func main()  {
 	fmt.Println(strings.Join(strList, ";"))
 }
  */
+
+func main()  {
+	var str = "hello"
+	var bytesSlice []byte
+	bytesSlice = []byte(str)
+	fmt.Println(bytesSlice, bytesSlice[1])
+	var resStr = string(bytesSlice)
+	fmt.Println(resStr)
+}
